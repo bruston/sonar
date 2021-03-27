@@ -1,7 +1,7 @@
 sonar
 =====
 
-Subdomain enumeration via the JSON API provided by https://sonar.omnisint.io/ which uses the Rapid9 dataset.
+Subdomain enumeration via the JSON API provided by https://sonar.omnisint.io/ which uses the Rapid7 dataset.
 
 ## Usage
 
