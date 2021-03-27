@@ -34,12 +34,12 @@ func main() {
 			fmt.Fprintf(os.Stderr, "error connecting to omnisint: %s\n", err)
 			os.Exit(1)
 		}
-		defer resp.Body.Close()
 		b, err := ioutil.ReadAll(resp.Body)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "error reading response body: %s\n", err)
 			os.Exit(1)
 		}
+		resp.Body.Close()
 		if bytes.HasPrefix(b, []byte("null")) {
 			break
 		}
