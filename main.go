@@ -48,6 +48,9 @@ func main() {
 			fmt.Fprintf(os.Stderr, "omnisint responded with non-JSON data: %s\n", err)
 			os.Exit(1)
 		}
+		if len(hosts) == 0 {
+			break
+		}
 		for _, v := range hosts {
 			if *noDupes {
 				if _, ok := dupes[v]; !ok {
